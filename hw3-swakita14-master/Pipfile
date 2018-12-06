@@ -1,0 +1,16 @@
+[[source]]
+url = "https://pypi.org/simple"
+name = "pypi"
+verify_ssl = true
+
+[packages]
+flask = "*"
+mongoengine = "*"
+pytest = "*"
+pymongo = "*"
+gunicorn = "*"
+
+[requires]
+python_version = "3.6"
+
+[dev-packages]

@@ -1,0 +1,48 @@
+swagger: "2.0"
+info:
+  description: This is the swagger file that goes with our server code
+  version: "1.0.0"
+  title: Shion's REST API
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+
+basePath: "/api"
+
+# Paths supported by the server application
+paths:
+  /post:
+    get:
+      operationId: "posts.read"
+      tags:
+        - "Post"
+      summary: "The post data structure supported by the server application"
+      description: "Read the list of posts"
+      responses:
+        200:
+          description: "Successful read posts list operation"
+          schema:
+            type: "array"
+            items:
+              properties:
+                id:
+                  type: "integer"
+                title:
+                  type: "string"
+                body:
+                  type: "string"
+                link:
+                  type: "boolean"
+                url:
+                  type: "string"
+                timestamp:
+                  type: "string"
+                user_id: 
+                  type: "integer"
+                category_id:
+                  type: "integer"
+                votes:
+                  type: "integer"
+                version:
+                  type: "integer"
